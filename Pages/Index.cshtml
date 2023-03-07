@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "MS Link";
+}
+
+<div>
+    <h1>ASP.NET Core and Microsoft Graph</h1>
+    <br />
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h4>
+            @if (Model.UserPhoto != null)
+            {
+                <img src="data:image/jpeg;base64, @Model.UserPhoto" class="user-photo nav-profile-photo rounded-circle align-self-center mr-2" />
+            }
+            Welcome to the Star Gemini App (lite), @Model.UserDisplayName!</h4>
+            <br />
+            <h5>Check out what the app supports!</h5>
+            <div class="container">
+                <div class="container">
+                  <div class="row">
+                        <div class="col-sm">
+                            <div class="card mt-2 mb-2" style="width: 18rem;">
+                          <div class="card-body">
+                            <h5 class="card-title">Emails!</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Manage your emails</h6>
+                            <p class="card-text">Quick preview your emails, or send one right from the web now!</p>
+                                    <a href="/Email" class="btn btn-dark">Click Here</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                              <div class="card mt-2 mb-2" style="width: 18rem;">
+                              <div class="card-body">
+                                <h5 class="card-title">Calendars!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Check your calendars</h6>
+                                <p class="card-text">You can see upcoming events, or create new ones here too!</p>
+                                        <a href="/Calendar" class="btn btn-dark">Click Here</a>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="col-sm">
+                              <div class="card mt-2 mb-2" style="width: 18rem;">
+                              <div class="card-body">
+                                <h5 class="card-title">Files!</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">View your files</h6>
+                                <p class="card-text">Upload and download files right from the web app!</p>
+                                    <a href="/Files" class="btn btn-dark">Click Here</a>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    }
+    else
+    {
+        <a class="btn btn-primary btn-large" href="https://localhost:5001/signin-oidc">Click here to sign in</a>
+    }
+</div>
