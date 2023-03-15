@@ -3,7 +3,7 @@
 [![Hack Together: Microsoft Graph and .NET](https://img.shields.io/badge/Microsoft%20-Hack--Together-orange?style=for-the-badge&logo=microsoft)](https://github.com/microsoft/hack-together)
 
 - Use Microsoft Graph to keep your workspace in one place
-- Check latest emails, to-do lists, calendar to stay productive
+- Check latest emails, calendar and upload important files to stay productive
 
 ### Pre-requisite
 - [Microsoft 365 developer tenant](https://developer.microsoft.com/office/dev-program?ocid=MSlearn&WT.mc_id=m365-30352-cxa "Microsoft 365 developer tenant")
